@@ -1,0 +1,198 @@
+   body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #b68303;
+      color: #333;
+    }
+                               /* header & nav */
+    header {
+      box-sizing: border-box;
+      display: inline-flex;
+      justify-content:space-between;
+      align-items:center;
+      padding: 20px 40px;
+      margin-bottom: 400px;
+      background-color: rgb(0, 0, 0);
+      box-shadow: 7px 9px 19px rgb(0 0 0 / 80%);
+      height:70px;
+      border-radius: 40px;
+      position: fixed; 
+      top:33px;
+      width: 100%;
+      z-index: 1000; 
+    }
+    nav a {
+      margin: 0 16px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition-duration: 0.1s;
+    }
+    a:hover{
+      color:orange;
+    }
+    .circle{
+      padding:55px;
+      background-color: rgb(0, 0, 0);
+      border-radius:100px ;
+       box-shadow: 7px 9px 19px rgb(0 0 0 / 80%);
+    }
+    .search{
+      color:#b68303;
+      font-size: 20px;
+      outline:none;
+      height: 40px;
+      border: transparent;
+      border-radius: 20px;
+      text-align: center;
+      background-color:#333;
+      transition-duration:1s;
+    }
+    .search:hover{
+      box-shadow:7px 7px 10px #b68303;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 40px;
+    }
+    .hero-text h1 {
+      font-size: 4rem;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 20px;
+    }
+    .hero-text button {
+      height:75px;
+      width:180px;
+      padding: 15px 25px;
+      margin-right: 10px;
+      border: none;
+      background-color: #000000;
+      color: white;
+      font-weight: 600;
+      border-radius: 45px;
+      cursor: pointer;
+       scale:unset;
+      color: orange;
+      box-shadow: 10px 10px 10px rgb(17, 12, 2);
+    }
+    .hero-text button:active{
+          scale :0.95;
+    }
+    .hero-text .secondary {
+      background-color: transparent;
+      color: #000000;
+    }
+   
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    .category {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 400px;
+      background-color:#ffffff;
+      border:transparent;
+      border-radius: 20px;
+     box-shadow: 4px 4px 10px black;
+    }
+    .button-cat{
+      padding: 20px 80px;
+      background-color: #000000;
+      color :#b68303;
+      outline: none;
+      border: none;
+      border-radius: 30px;
+      position: absolute;
+      bottom:40px;
+      box-shadow: 4px 4px 10px black;
+    }
+    .word{
+      padding: 20px 80px;
+      color :#000000;
+      outline: none;
+      position: absolute;
+      bottom:90px;
+    }
+    .products-2 {
+      background-color:#eeeeeead;
+      padding: 50px;
+      margin-top: 40px;
+    }
+    .product-2-grid {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+    }
+    .product-2 {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 16px;
+      width: 200px;
+      height: 150px;
+      text-align: center;
+      background-color: white;
+    }
+    .product-2 img {
+      width: 100px;
+      height: 100px;
+    }
+    .product-2 .price {
+      margin: 10px 0;
+      font-weight: 600;
+    }
+    .product-2 button {
+      padding: 8px 12px;
+      border: none;
+      background-color: #000000;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .products {
+      padding: 40px;
+    }
+    .product-grid {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+    }
+    .product {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 16px;
+      width: 200px;
+      text-align: center;
+      background-color: white;
+    }
+    .product img {
+      width: 100px;
+      height: 100px;
+    }
+    .product .price {
+      margin: 10px 0;
+      font-weight: 600;
+    }
+    .product button {
+      padding: 8px 12px;
+      border: none;
+      background-color: #000000;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+
+      text-align: center;
+      padding: 20px;
+      background-color: #020000;
+      font-size: 0.9rem;
+    }
