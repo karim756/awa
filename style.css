@@ -52,7 +52,7 @@
     .search:hover{
       box-shadow:7px 7px 10px #b68303;
     }
-
+                                      /* intro text */
     .hero {
       display: flex;
       align-items: center;
@@ -70,27 +70,41 @@
       padding: 15px 25px;
       margin-right: 10px;
       border: none;
+      outline: none;
       background-color: #000000;
       color: white;
       font-weight: 600;
       border-radius: 45px;
       cursor: pointer;
-       scale:unset;
+      scale:unset;
       color: orange;
       box-shadow: 10px 10px 10px rgb(17, 12, 2);
     }
     .hero-text button:active{
-          scale :0.95;
+      scale :0.95;
     }
     .hero-text .secondary {
       background-color: transparent;
       color: #000000;
     }
-   
+                                 /* awa discription */
+    .awa{
+      display: flex;
+      padding: 90px  0px;
+    }
+    pre{
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-family:"Playwrite GB S", cursive; 
+      cursor:default;
+      margin-top:9rem;
+      text-shadow: 4px 4px 10px #ffffff;
+    }
+                                   /* link to shop */
     .categories {
       display: flex;
       justify-content: space-around;
-      padding: 20px;
+      padding: 90px 0px;
     }
     .category {
       position: relative;
@@ -104,16 +118,21 @@
       border-radius: 20px;
      box-shadow: 4px 4px 10px black;
     }
-    .button-cat{
-      padding: 20px 80px;
+    .category button{
+      padding:20px 80px;
       background-color: #000000;
       color :#b68303;
+      cursor: pointer;
       outline: none;
       border: none;
       border-radius: 30px;
       position: absolute;
       bottom:40px;
+      left:45px;
       box-shadow: 4px 4px 10px black;
+    }
+    .category button:active{
+      scale: 0.95;
     }
     .word{
       padding: 20px 80px;
@@ -122,6 +141,7 @@
       position: absolute;
       bottom:90px;
     }
+                                              /* why awa ? */
     .products-2 {
       background-color:#eeeeeead;
       padding: 50px;
@@ -140,6 +160,7 @@
       height: 150px;
       text-align: center;
       background-color: white;
+      box-shadow: 4px 4px 10px black;
     }
     .product-2 img {
       width: 100px;
@@ -157,38 +178,16 @@
       border-radius: 6px;
       cursor: pointer;
     }
-    .products {
-      padding: 40px;
-    }
-    .product-grid {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-    }
-    .product {
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 16px;
-      width: 200px;
-      text-align: center;
+    .bord{
       background-color: white;
+      text-align: center;
+      text-shadow: #000000;
+      padding: 80px;
+      font-size: 25px;
+      font-family:"Playwrite GB S", cursive;
+       text-shadow: 4px 4px 10px black;
     }
-    .product img {
-      width: 100px;
-      height: 100px;
-    }
-    .product .price {
-      margin: 10px 0;
-      font-weight: 600;
-    }
-    .product button {
-      padding: 8px 12px;
-      border: none;
-      background-color: #000000;
-      color: white;
-      border-radius: 6px;
-      cursor: pointer;
-    }
+                                  /* footer */
     footer {
 
       text-align: center;
