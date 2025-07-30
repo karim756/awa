@@ -187,11 +187,30 @@
       font-family:"Playwrite GB S", cursive;
        text-shadow: 4px 4px 10px black;
     }
-                                  /* footer */
-    footer {
-
-      text-align: center;
+                                 /* footer */
+    footer{
       padding: 20px;
       background-color: #020000;
-      font-size: 0.9rem;
+      position: relative;
+      border-radius: 50px;
     }
+    footer h1{
+      font-size:60px;
+      color:#b68303;
+    }
+    footer a {
+      display: block;
+      padding: 20px;
+      font-family:"Playwrite GB S", cursive; 
+      text-decoration: none;
+    }
+    footer img{
+      position: absolute;
+      right:90px;
+      top:60px;
+   }
+    footer div{
+    padding: 50px;
+    text-align: center;
+    color:#b68303
+   }
