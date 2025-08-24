@@ -49,6 +49,7 @@
       position: fixed; 
       top:33px;
       z-index: 1000;  
+        overflow:hiiden;
     }
     nav a {
       width: 100%;
@@ -412,6 +413,7 @@
       font-family:"Playwrite GB S", cursive; 
 
      }
+
 
 
 
