@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css">
+  <link rel="website icon" href="../../coding/image/AWA-PNG-1-e1638974616381.png">
+                     <!-- Google foont famliy -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"rel="stylesheet">
+                     <!-- font awsome libaray -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+   integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>product range</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+      
+      .content h1{
+        padding-bottom:40px;
+        text-align: center;
+        font-size: 45px;
+        font-family:"Playwrite GB S", cursive;
+        color:var(--maincolor2,red);
+      }
+
+      
+      .content h2{
+        color: var(--maincolor2,red);
+      }
+
+      .content p{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .content h3{
+        background-color: var(--maincolor2,red);
+        padding: 10px;
+        font-size: 30px;
+        color:var(--maincolor1);
+         border-radius: 50px;
+      }
+
+      .ourrange{
+        display: flex;
+        padding: 10px ;
+      }
+
+      .ourrange div{
+        padding: 10px  40px 100px 30px ;
+      }
+
+      .list-1 div{
+        position: relative;
+        padding: 10px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+        /* Responsive Design */
+         @media (max-width: 770px){
+          .ourrange img{
+            display: none;
+          }
+          .ourrange div{
+            padding: 10px 20px;
+          }
+          .ourrange img{
+            width: 400px;
+            height: 500px;
+          }
+          .content{
+            height: 1900px;
+          }
+        }
+        @media (max-width: 400px) {
+          .content{
+            height: 2800px;
+          }
+            .ourrange {
+                flex-direction: column;
+            }
+            .ourrange img{
+              display: flex;
+              margin: auto;
+              width: 300px;
+
+            }
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+        }
+       
+
+    </style>
+</head>
+<header>
+    <img src="../..//coding/image/AWA-PNG-1-e1638974616381.png" alt="AWA Logo" height="40">
+    <nav>
+      <a href="../index.html"><i class="fa-solid fa-house"></i> home</i></a>
+      <!-- <a href="#" class="circle"></a> -->
+      <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+      <a class="active1" href="OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+      <a href="../OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+      <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
+      <a href="#"><i class="fa-solid fa-phone-volume"></i> contact</a>
+    </nav>
+ <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+       <div class="dropdown_menu ">  
+         <a href="../index.html"><i class="fa-solid fa-house"></i> home</i></a>
+         <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+         <a class="active1" href="OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+         <a href="../OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+         <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
+         <a href="#"><i class="fa-solid fa-phone-volume"></i> contact</a>
+       </div>
+  </header>
+   <script>
+        const togglebtn = document.querySelector(".toggle_btn")
+        const togglebtnicon = document.querySelector(".toggle_btn")
+        const dropdownmenu = document.querySelector(".dropdown_menu")
+
+        togglebtn.onclick = function () {
+            dropdownmenu.classList.toggle("open")
+            const isopen = dropdownmenu.classList.contains("open")
+
+            togglebtnicon.classList = isopen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
+<body>
+    <!-- The sidebar -->
+   <div class="sidebar">
+    <a href="OLEORESINS.html">OLEORESINS</a>
+    <a href="HERB EXTRACTS.html">HERB EXTRACTS</a>
+    <a href="GREEN SPICE EXTRACTS.html">GREEN SPICE EXTRACTS</a>
+    <a href="ROASTED AND FRIED FLAVOURS.html">ROASTED AND FRIED FLAVOURS</a>
+    <a href="ESSENTIAL OILS.html">ESSENTIAL OILS</a>
+    <a href="SPICE HYDROPS™.html">SPICE HYDROPS™</a>
+    <a href="NATURAL ANTI-OXIDANTS.html">NATURAL ANTI-OXIDANTS</a>
+    <a href="ENCAPSULATED & SPRAYDRIED.html">ENCAPSULATED & SPRAYDRIED</a>
+    <a href="RAW SPICE.html">RAW SPICE</a>
+    <a class="active" href="LIQUID SEASONINGS.html">LIQUID SEASONINGS</a>
+  </div>
+
+<!-- Page content -->
+<div class="content">
+  <h1>LIQUID SEASONINGS</h1>
+  <P>
+    Liquid Seasonings are natural blends of herbs and spice extracts which provide our customers with a complex, authentic flavour profile suitable for many applications. These are convenient products for the food industry with a strong profile compared to the raw powder blends. Compared to the powder blends, liquid blends have a long shelf life and negligible moisture content.
+  </P>
+   <h2>Application</h2>
+  
+    <div class="ourrange">
+
+        <div class="list-1">
+            <div> • Seasonings</div>
+            <div> • Savoury & Culinary </div>
+            <div> • Processed Meat (Meat Products, Minced Meat, and Sausages etc.)</div>
+            <div> • Sauces, Salad Dressings & Gravies</div>
+        </div>
+        <div class="list-1">  
+            <div> • Beverages</div>
+            <div> • Confectioneries</div> 
+            <div> • Fortification Of Powdered Spice Blends</div>
+            <div> • Other Processed Foods</div>
+        </div>
+
+    </div>
+  <h3>Our Range</h3>
+  <div class="ourrange">
+
+    <div class="list-1">
+        <div>• Barbeque Flavor</div>
+        <div>• Chilli Spice</div>
+        <div>• Curry Spice</div>
+        <div>• Frankfurter Spice</div>
+        <div>• Garam Masala</div>
+        <div>• Ginger- Garlic</div>
+        <div>• Paprika- Pepper</div>
+        <div>• Pepperoni Flavour</div>
+        <div>• Pizza Flavour</div>
+        <div>• Luncheon Spice Mix <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+        <div>• Burger Spice Mix <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+        <div>• Kofta Spice Mix  <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+        <div>• Alex Sausage Spice Mix <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+        <div>• Lebanese Kofta Spice Mix  <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+        <div>• Lebanese Burger Spice Mix  <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+    </div>
+    <div class="list-1">  
+         <div>• Ginger- Mint</div>
+         <div>• Grilled Chicken Flavour</div>
+         <div>• Jalapeno Flavour</div>
+         <div>• Ketchup Flavour</div>
+         <div>• Noodle Masala</div>
+         <div>• Onion- Garlic</div>
+         <div>• Tandoori Masala Flavour</div>
+         <div>• Tea Masala Flavour</div>
+         <div>• Turkish Sujuk Spice Mix <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+         <div>• Lebanese Sujuk Spice Mix <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+         <div>• Shawerma <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+         <div>• Oriental Sausage Spice Mix <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+         <div>• Biriyani Spice Mix <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+         <div>• Bastirma Spice Mix <i><img src="../../../coding/image/depositphotos_29953785-stock-illustration-blue-new-sticker.jpg" style="width: 37px; height:37px ; position: absolute;top:3px"  alt="image"></i></div>
+    </div>
+    <div class="image">
+          <img src="../../coding/image/d3f587f561dd44afe5824f076b38de16 (1).png" alt="image">
+    </div>
+
+  </div>
+</div>
+<footer>
+
+    <div>
+      <h1>AWA Food Solutions</h1>
+    </div>
+    <div class="footer-li">
+       <ul>
+           <li><a href="#"> <i class="fa-brands fa-instagram fa-2xl"></i> instagram</a></li>
+           <li><a href="#"> <i class="fa-brands fa-facebook fa-2xl"></i>facebook</a></li>
+           <li><a href="#"> <i class="fa-brands fa-twitter fa-2xl"></i>twitter</a></li>
+       </ul>
+       <ul>
+           <li><i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i></i> Head Office: 243, Horreya Ave., Sporting Alexandria - Egypt</li>
+           <li><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></i> info@awa-bioingredients.com</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i></i>+203 429 2030</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i>+203 421 1200</li>
+       </ul>
+    <img src="../../coding/image/f0a7f4b9b5d8710c35fae2aa405b7472.png" alt="filter">
+    </div>
+    <div class="copy-right">&copy; 2025 AWA Food Solutions. All rights reserved.</div>
+
+  </footer>
+</body>
+</html>

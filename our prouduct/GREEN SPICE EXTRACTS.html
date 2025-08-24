@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css">
+  <link rel="website icon" href="../../coding/image/AWA-PNG-1-e1638974616381.png">
+                     <!-- Google foont famliy -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"rel="stylesheet">
+                     <!-- font awsome libaray -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+   integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>product range</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+      
+      .content h1{
+        padding-bottom:40px;
+        text-align: center;
+        font-size: 45px;
+        font-family:"Playwrite GB S", cursive;
+        color:var(--maincolor2,red);
+      }
+
+      
+      .content h2{
+        color: var(--maincolor2,red);
+      }
+
+      .content p{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .content h3{
+        background-color: var(--maincolor2,red);
+        padding: 10px;
+        font-size: 30px;
+        color:var(--maincolor1);
+         border-radius: 50px;
+      }
+
+      .ourrange{
+        display: flex;
+        padding: 10px ;
+      }
+
+      .ourrange div{
+        padding: 10px 50px;
+      }
+
+      .list-1 div{
+        padding: 40px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+  /* Responsive Design */
+         @media (max-width: 770px){
+          .ourrange img{
+            display: none;
+          }
+          .ourrange div{
+            padding: 10px 20px;
+          }
+          .content{
+            height: 1050px;
+          }
+        }
+        @media (max-width: 400px) {
+          .content{
+            height: 1500px;
+          }
+            .ourrange {
+                flex-direction: column;
+            }
+            .ourrange img{
+              display: flex;
+              margin: auto;
+              width: 250px;
+
+            }
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+        }
+       
+
+
+    </style>
+</head>
+<header>
+    <img src="../..//coding/image/AWA-PNG-1-e1638974616381.png" alt="AWA Logo" height="40">
+    <nav>
+      <a href="../index.html"><i class="fa-solid fa-house"></i> home</i></a>
+      <!-- <a href="#" class="circle"></a> -->
+      <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+      <a class="active1" href="OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+      <a href="../OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+      <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
+      <a href="#"><i class="fa-solid fa-phone-volume"></i> contact</a>
+    </nav>
+ <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+       <div class="dropdown_menu ">  
+         <a href="../index.html"><i class="fa-solid fa-house"></i> home</i></a>
+         <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+         <a class="active1" href="OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+         <a href="../OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+         <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
+         <a href="#"><i class="fa-solid fa-phone-volume"></i> contact</a>
+       </div>
+  </header>
+   <script>
+        const togglebtn = document.querySelector(".toggle_btn")
+        const togglebtnicon = document.querySelector(".toggle_btn")
+        const dropdownmenu = document.querySelector(".dropdown_menu")
+
+        togglebtn.onclick = function () {
+            dropdownmenu.classList.toggle("open")
+            const isopen = dropdownmenu.classList.contains("open")
+
+            togglebtnicon.classList = isopen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
+<body>
+    <!-- The sidebar -->
+   <div class="sidebar">
+    <a href="OLEORESINS.html">OLEORESINS</a>
+    <a href="HERB EXTRACTS.html">HERB EXTRACTS</a>
+    <a class="active"  href="GREEN SPICE EXTRACTS.html">GREEN SPICE EXTRACTS</a>
+    <a href="ROASTED AND FRIED FLAVOURS.html">ROASTED AND FRIED FLAVOURS</a>
+    <a href="ESSENTIAL OILS.html">ESSENTIAL OILS</a>
+    <a href="SPICE HYDROPS™.html">SPICE HYDROPS™</a>
+    <a href="NATURAL ANTI-OXIDANTS.html">NATURAL ANTI-OXIDANTS</a>
+    <a href="ENCAPSULATED & SPRAYDRIED.html">ENCAPSULATED & SPRAYDRIED</a>
+    <a href="RAW SPICE.html">RAW SPICE</a>
+    <a href="LIQUID SEASONINGS.html">LIQUID SEASONINGS</a>
+  </div>
+
+<!-- Page content -->
+<div class="content">
+  <h1>GREEN SPICE EXTRACTS</h1>
+  <P>
+      Spices have played a central role in our lives, and more importantly 
+      in our food. Every spice has a unique taste and aroma that gives food
+      the flavour it deserves. Rich in antioxidants and alluring tastes, spices 
+      are the 'secret ingredient' every good dish boasts of. We make an effort to 
+      carefully select and source only the finest quality of fresh green spices. With 
+      our refined processes and modern equipment, we have been able to extract the delicate
+      flavour of these spices while preserving its freshness.
+  </P>
+   <h2>Application</h2>
+  <p>
+    Our value added spice extracts can be used across industries like food,
+    beverage, confectionary, health & wellness, personal care and for agriculture and livestock.
+  </p>
+  <h3>Our Range</h3>
+  <div class="ourrange">
+    <div class="list-1">
+      <div>• Coriander Leaf</div>
+      <div>• Curry Leaf</div>
+      <div>• Garlic</div>
+      <div>• Ginger</div>
+    </div>
+  <div class="list-1">  
+       <div>• Green Chilli</div>
+       <div>• Onion</div>
+       <div>• Pepper</div>
+  </div>
+  <div class="image">
+    <img src="../../coding/image/a49ce2ac82b2f9e00e9237f7ab84de7d.png" alt="image">
+  </div>
+</div>
+</div>
+<footer>
+
+    <div>
+      <h1>AWA Food Solutions</h1>
+    </div>
+    <div class="footer-li">
+       <ul>
+           <li><a href="#"> <i class="fa-brands fa-instagram fa-2xl"></i> instagram</a></li>
+           <li><a href="#"> <i class="fa-brands fa-facebook fa-2xl"></i>facebook</a></li>
+           <li><a href="#"> <i class="fa-brands fa-twitter fa-2xl"></i>twitter</a></li>
+       </ul>
+       <ul>
+           <li><i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i></i> Head Office: 243, Horreya Ave., Sporting Alexandria - Egypt</li>
+           <li><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></i> info@awa-bioingredients.com</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i></i>+203 429 2030</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i>+203 421 1200</li>
+       </ul>
+    <img src="../../coding/image/f0a7f4b9b5d8710c35fae2aa405b7472.png" alt="filter">
+    </div>
+    <div class="copy-right">&copy; 2025 AWA Food Solutions. All rights reserved.</div>
+
+  </footer>
+</body>
+</html>
