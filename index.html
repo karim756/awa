@@ -4,70 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
-   <link rel="website icon" href="image/AWA-PNG-1-e1638974616381.png">
+  <link rel="website icon" href="../../coding/image/AWA-PNG-1-e1638974616381.png">
                      <!-- Google foont famliy -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"rel="stylesheet">
                      <!-- font awsome libaray -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+   integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>AWA Food Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <img src="image/ChatGPT Image Jul 16, 2025, 10_00_31 AM (1).png"style="width: 200px; height:70px;" alt="AWA Logo" height="40">
+    <img src="../..//coding/image/AWA-PNG-1-e1638974616381.png" alt="AWA Logo" height="40">
     <nav>
-      <a href="index.html"><i class="fa-solid fa-house"></i> home</i></a>
-      <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
-      <a href="#" class="circle"></a>
+      <a class="active1" href="index.html"><i class="fa-solid fa-house"></i> home</i></a>
       <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+      <a href="our prouduct/OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+      <a href="OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+      <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
       <a href="#"><i class="fa-solid fa-phone-volume"></i> contact</a>
     </nav>
-    <div >
-      <i class="fa-brands fa-searchengin fa-2xl" style="color:#b68303"></i>
-      <input type="search" class="search" >
+    <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
     </div>
+       <div class="dropdown_menu ">
+         <a class="active1" href="index.html"><i class="fa-solid fa-house"></i> home</i></a>
+         <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+         <a href="our prouduct/OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+         <a href="OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+         <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
+         <a href="#"><i class="fa-solid fa-phone-volume"></i> contact</a>
+       </div>
   </header>
+   <script>
+        const togglebtn = document.querySelector(".toggle_btn")
+        const togglebtnicon = document.querySelector(".toggle_btn")
+        const dropdownmenu = document.querySelector(".dropdown_menu")
+
+        togglebtn.onclick = function () {
+            dropdownmenu.classList.toggle("open")
+            const isopen = dropdownmenu.classList.contains("open")
+
+            togglebtnicon.classList = isopen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
   <section class="hero">
     <div class="hero-text">
       <h1>Quality Food <br>Ingredients</h1>
       <a href="https://awafoodsolutions.com/shop/"><button>Shop Now</button></a>
       <button class="secondary">Get a Quote</button>
     </div>
-    <img src="image/MCT-oil-powder-web-pic-002.png" style="width: 600px ;" alt="Garlic Paste" >
+    <img src="../../coding/image/MCT-oil-powder-web-pic-002.png" style="width: 350px ; padding: 2em;" alt="Garlic Paste" >
   </section>
   <section>
     <div class="awa">
-      <img src="image/719d5a1de81493784120c2691cc5d4b5.png" alt="awa">
-      <pre>
+      <img src="../../coding/image/719d5a1de81493784120c2691cc5d4b5.png" alt="awa">
+      <p>
            When nature itself holds flavours so unique, why would one go in search of
            the same elsewhere? Even if we did,what we wind up with is nothing close to 
            what nature has in store. Characteristics so distinct that even a tiny drop
            of it can do wonders. So we at AWA did the simple task of relying truly on 
            nature. This merged with our advanced technology paved way to the end 
-           result,everything from A to Z, processed to perfection..
-      </pre>
-    </div>
-  </section>
-  <section class="categories">
-    <div class="category">
-      <img src="image/logo100.png" style="position: absolute;top: 60px;; width:267px; height: 80px;" alt="sweet and slim">
-      <h2 class="word">sweet&slim</h2>
-      <a href="https://awafoodsolutions.com/shop/product-category/sweet-slim/"><button>Shop Now</button></a>
-    </div>
-    <div class="category">
-      <img src="image/squeasy1-300x153.png" style="position: absolute; top:30px;" alt="squeasy">
-      <h2 class="word">squeasy</h2>
-      <a href="https://awafoodsolutions.com/shop/product-category/squeasy/"><button>Shop Now</button></a>
-    </div>
-    <div class="category">
-      <img src="image/copy_635113057-300x292.png" style="position: absolute;top: -70px;" alt="ketolam">
-      <h2 class="word">ketolim</h2>
-      <a href="https://awafoodsolutions.com/shop/product-category/keto-slim/"><button>Shop Now</button></a>
+           result,everything from A to Z, processed to perfection.
+      </p>
     </div>
   </section>
   <section class="products-2">
@@ -96,14 +100,29 @@
     </div>
   </section>
   <div class="bord">High Quality and Amazing Taste.</div>
- <footer>
-    <h1>AWA food solutions</h1>
-    <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i> instagram</a>
-    <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i> facebook</a>
-    <a href="#"><i class="fa-brands fa-twitter fa-2xl"></i> twitter</a>
-    <img src="image/f0a7f4b9b5d8710c35fae2aa405b7472.png"  alt="filter">
-    <div>&copy; 2025 AWA Food Solutions. All rights reserved.</div>
-  </footer>
+  <footer>
 
+    <div>
+      <h1>AWA Food Solutions</h1>
+    </div>
+    <div class="footer-li">
+       <ul>
+           <li><a href="#"> <i class="fa-brands fa-instagram fa-2xl"></i> instagram</a></li>
+           <li><a href="#"> <i class="fa-brands fa-facebook fa-2xl"></i>facebook</a></li>
+           <li><a href="#"> <i class="fa-brands fa-twitter fa-2xl"></i>twitter</a></li>
+       </ul>
+       <ul>
+           <li><i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i></i> Head Office: 243, Horreya Ave., Sporting Alexandria - Egypt</li>
+           <li><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></i> info@awa-bioingredients.com</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i></i>+203 429 2030</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i>+203 421 1200</li>
+       </ul>
+    <img src="../../coding/image/f0a7f4b9b5d8710c35fae2aa405b7472.png" alt="filter">
+    </div>
+    <div class="copy-right">&copy; 2025 AWA Food Solutions. All rights reserved.</div>
+
+  </footer>
+</body>
+</html>
 </body>
 </html>
