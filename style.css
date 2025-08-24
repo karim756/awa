@@ -1,127 +1,244 @@
-   body {
+    /* #b68303;
+    --maincolor1:  #b68303;
+      --maincolor2:rgb(0, 0, 0); */
+      /* --maincolor1: #e0ffc2;
+      --maincolor2:#064734; */
+      /*  --maincolor1: #abc8a2;
+      --maincolor2:#1a2417; */
+      /*   --maincolor1:#4c9db0;
+      --maincolor2:#ffebaf; */
+      /*   --maincolor1:#fe7f2d;
+      --maincolor2:#233d4d; #4796a8 */
+   :root{
+      /* --maincolor1:#fdeab0;
+      --maincolor2:#4796a8; */
+      /* --maincolor1: #abc8a2;
+      --maincolor2:#1a2417; */
+      --maincolor1:white;
+      --maincolor2:  #0c3a74;
+    }
+    /* body {
+    height: 130vh;
+    background-color: #000;
+    background-image: url("../../coding/image/test/886cd7a95f39ed3f92b30ee313623c4f.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} */
+  body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #b68303;
+      background-color:var(--maincolor1,red);
       color: #333;
     }
+    
                                /* header & nav */
     header {
       box-sizing: border-box;
-      display: inline-flex;
+      display:flex;
       justify-content:space-between;
       align-items:center;
-      padding: 20px 40px;
-      margin-bottom: 400px;
-      background-color: rgb(0, 0, 0);
-      box-shadow: 7px 9px 19px rgb(0 0 0 / 80%);
-      height:70px;
+      padding: 2rem 4rem;
+      margin-bottom: 40rem;
+      background-color: var(--maincolor2,white);
+      box-shadow: 7px 9px 19px var(--maincolor2,white);
+      height:4.5rem;
+      width: 100%;
       border-radius: 40px;
       position: fixed; 
       top:33px;
-      width: 100%;
-      z-index: 1000; 
+      z-index: 1000;  
     }
     nav a {
-      margin: 0 16px;
+      width: 100%;
+      margin: 0 1.6rem;
+      padding: 10px;
       text-decoration: none;
-      color: white;
+      color:var(--maincolor1,red);
       font-weight: 500;
-      transition-duration: 0.1s;
     }
-    a:hover{
-      color:orange;
-    }
-    .circle{
-      padding:55px;
-      background-color: rgb(0, 0, 0);
-      border-radius:100px ;
-       box-shadow: 7px 9px 19px rgb(0 0 0 / 80%);
-    }
-    .search{
-      color:#b68303;
-      font-size: 20px;
-      outline:none;
-      height: 40px;
-      border: transparent;
+    nav a:hover{ 
+       background-color: var(--maincolor1);
+      color: black;
+      padding: 10px ;
       border-radius: 20px;
-      text-align: center;
-      background-color:#333;
-      transition-duration:1s;
     }
-    .search:hover{
-      box-shadow:7px 7px 10px #b68303;
+    .active1{
+      background-color: var(--maincolor1);
+      color: black;
+      padding: 10px ;
+      border-radius: 20px;
     }
+     .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display:none;
+}
+
+    /* DROPDOWN MENU */
+
+.dropdown_menu {
+    display:none;
+    position: absolute;
+    right: 2rem;
+    top:60px;
+    height: 0;
+    width :300px;
+    background: rgba(0, 0, 0,0.8);
+    backdrop-filter: blur(100px);
+    border-radius :10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+}
+.dropdown_menu.open{
+    height: 280px;
+    z-index: 1;
+}
+.dropdown_menu a{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    z-index: 1;
+    text-decoration: none;
+    color: var(--maincolor2);
+    font-weight: 500;
+}
+  .dropdown_menu a:hover{ 
+      background-color: var(--maincolor1);
+      color: black;
+      padding: 10px ;
+      border-radius: 20px;
+    }
+
+
+/* RESPONSIVE DESIGN */
+
+
+@media (max-width:1200px){
+    nav a{
+        display: none;
+    }
+
+     .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width:576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+   
                                       /* intro text */
     .hero {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 60px 40px;
+      padding: 6rem 3rem;
     }
     .hero-text h1 {
+      color:var(--maincolor2);
       font-size: 4rem;
       font-family: 'Montserrat', sans-serif;
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     }
     .hero-text button {
-      height:75px;
-      width:180px;
-      padding: 15px 25px;
-      margin-right: 10px;
+      height:5rem;
+      width:11rem;
+      padding: 1.5rem 2.5rem;
+      margin-right: 1.0rem;
       border: none;
       outline: none;
-      background-color: #000000;
+      background-color: var(--maincolor2,white);
       color: white;
       font-weight: 600;
       border-radius: 45px;
       cursor: pointer;
       scale:unset;
-      color: orange;
-      box-shadow: 10px 10px 10px rgb(17, 12, 2);
+      color: var(--maincolor1,red);
+      box-shadow: 10px 10px 10px var(--maincolor2,white);
     }
     .hero-text button:active{
       scale :0.95;
     }
     .hero-text .secondary {
       background-color: transparent;
-      color: #000000;
+      color: var(--maincolor2,white);
     }
                                  /* awa discription */
     .awa{
       display: flex;
-      padding: 90px  0px;
+      padding: 6rem  0rem;
     }
-    pre{
+    .awa img{
+      display:flex;
+      justify-self: center;
+      padding: 10px;
+    }
+     .awa p{
+      padding: 40px;
+      color:var(--maincolor2);
       font-size: 1.2rem;
       font-weight: bold;
       font-family:"Playwrite GB S", cursive; 
       cursor:default;
-      margin-top:9rem;
-      text-shadow: 4px 4px 10px #ffffff;
+      /* margin-top:9rem; */
+      /* text-shadow: 4px 4px 10px #ffffff; */
     }
+
+    @media (max-width:855px){
+    .awa {
+        display:block;
+    }
+    .hero img{
+      display: none;
+    }
+    .footer-li {
+      flex-direction: column;
+    }
+    .footer-li img{
+      width: 250px;
+      margin: auto;
+    }
+    footer .copy-right{
+      font-size: 13px;
+    }
+
+
+   }
                                    /* link to shop */
     .categories {
       display: flex;
       justify-content: space-around;
-      padding: 90px 0px;
+      padding: 9rem 0rem;
+       width:100%;
     }
     .category {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 300px;
-      height: 400px;
+       width: calc(70%/3);
+      height: 25rem;
       background-color:#ffffff;
       border:transparent;
       border-radius: 20px;
-     box-shadow: 4px 4px 10px black;
+      box-shadow: 4px 4px 10px var(--maincolor2,white);
     }
     .category button{
-      padding:20px 80px;
-      background-color: #000000;
-      color :#b68303;
+      padding:5%  25%;
+      background-color: var(--maincolor2,white);
+      color :var(--maincolor1,red);
       cursor: pointer;
       outline: none;
       border: none;
@@ -129,23 +246,25 @@
       position: absolute;
       bottom:40px;
       left:45px;
-      box-shadow: 4px 4px 10px black;
+      box-shadow: 4px 4px 10px var(--maincolor2,white);
     }
     .category button:active{
       scale: 0.95;
     }
     .word{
       padding: 20px 80px;
-      color :#000000;
+      color :var(--maincolor1,white);
       outline: none;
       position: absolute;
       bottom:90px;
     }
                                               /* why awa ? */
     .products-2 {
-      background-color:#eeeeeead;
+      backdrop-filter: blur(20px);
       padding: 50px;
       margin-top: 40px;
+      border-top-left-radius: 70px;
+      border-top-right-radius: 70px;
     }
     .product-2-grid {
       display: flex;
@@ -160,7 +279,7 @@
       height: 150px;
       text-align: center;
       background-color: white;
-      box-shadow: 4px 4px 10px black;
+      box-shadow: 4px 4px 10px var(--maincolor2,white);
     }
     .product-2 img {
       width: 100px;
@@ -173,7 +292,7 @@
     .product-2 button {
       padding: 8px 12px;
       border: none;
-      background-color: #000000;
+      background-color: var(--maincolor2,white);
       color: white;
       border-radius: 6px;
       cursor: pointer;
@@ -181,36 +300,116 @@
     .bord{
       background-color: white;
       text-align: center;
-      text-shadow: #000000;
+      text-shadow: var(--maincolor2,white);
       padding: 80px;
       font-size: 25px;
       font-family:"Playwrite GB S", cursive;
-       text-shadow: 4px 4px 10px black;
+      text-shadow: 4px 4px 10px var(--maincolor2,white);
+      margin-bottom: 100px;
+      border-bottom-left-radius: 70px;
+      border-bottom-right-radius:70px;
     }
-                                 /* footer */
+                                    /* The side navigation menu */
+    .sidebar {
+      padding: 0;
+      width: 220px;
+      background-color: var(--maincolor1);
+      position:absolute;
+      top:108px;
+      height: 100%;
+      border-radius: 20px;
+      overflow: auto;
+      margin: 0;
+    }
+
+                                            /* Sidebar links */
+    .sidebar a {
+     display: block;
+     padding: 16px;
+     color: black;
+     text-decoration: none;
+     font-size: 13px;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+                                           /* Active/current link */
+    .sidebar a.active {
+      background-color:var(--maincolor2);
+      border-top-left-radius:20px;
+      border-bottom-left-radius:20px;
+      color: white;
+    }
+
+                                          /* Links on mouse-over */
+    .sidebar a:hover:not(.active) {                      
+     background-color: #555;
+     border-top-left-radius:25px;
+     border-bottom-left-radius:25px;
+     color: white;
+    }
+
+      /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+    div.content {
+     margin-left: 220px;
+     margin-top: 130px;
+     padding: 1px 16px;
+     overflow:hidden;
+    }
+
+       /* On screens that are less than 700px wide, make the sidebar into a topbar */
+    @media screen and (max-width: 700px) {
+       .sidebar {
+        width: 100%;
+        height: auto;
+       position: relative;
+   }
+   .sidebar a {float: left;}
+   div.content {margin-left: 0;}
+  }
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+ 
+                                                  /* footer */
     footer{
-      padding: 20px;
-      background-color: #020000;
-      position: relative;
-      border-radius: 50px;
+      background-color: var(--maincolor2);
+      color: var(--maincolor1);
+      border-radius: 70px;
+      width: 100%;
     }
-    footer h1{
-      font-size:60px;
-      color:#b68303;
-    }
-    footer a {
-      display: block;
+     footer div h1{
       padding: 20px;
+      font-size:50px;
+      font-family:"Playwrite GB S", cursive;
+      text-align: left;
+      margin: 0px;
+    }
+    .footer-li{
+      display: flex;
+    }
+     footer ul li {
+      list-style: none;
+      padding: 20px 110px 20px 20px;
+       font-family:"Playwrite GB S", cursive; 
+      text-decoration: none;
+      color: var(--maincolor1);
+     }
+    .footer-li ul li a{
       font-family:"Playwrite GB S", cursive; 
       text-decoration: none;
+      color: var(--maincolor1);
     }
-    footer img{
-      position: absolute;
-      right:90px;
-      top:60px;
-   }
-    footer div{
-    padding:50px;
-    text-align:center;
-    color:#b68303;
-   }
+    
+     footer .copy-right{
+      padding: 10px;
+      text-align: center;
+      font-family:"Playwrite GB S", cursive; 
+
+     }
+
