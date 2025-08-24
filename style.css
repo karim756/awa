@@ -49,12 +49,11 @@
       position: fixed; 
       top:33px;
       z-index: 1000;  
-        overflow:hiiden;
     }
     nav a {
       width: 100%;
-/*       margin: 0 1.6rem; */
-      padding: 10px;
+      margin: 0 1.6rem;
+      padding: 5px;
       text-decoration: none;
       color:var(--maincolor1,red);
       font-weight: 500;
@@ -413,6 +412,7 @@
       font-family:"Playwrite GB S", cursive; 
 
      }
+
 
 
 
