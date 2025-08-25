@@ -52,10 +52,11 @@
     }
     nav a {
       width: 100%;
-      margin: 0 1.6rem;
+      margin: 0 1.2rem;
       text-decoration: none;
       color:var(--maincolor1,red);
       font-weight: 500;
+      padding:10px;
     }
     nav a:hover{ 
       background-color: var(--maincolor1);
@@ -410,6 +411,7 @@
       font-family:"Playwrite GB S", cursive; 
 
      }
+
 
 
 
