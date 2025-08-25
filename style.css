@@ -61,7 +61,6 @@
     nav a:hover{ 
       background-color: var(--maincolor1);
       color: black;
-      padding: 10px ;
       border-radius: 20px;
     }
     .active1{
@@ -412,6 +411,7 @@
       font-family:"Playwrite GB S", cursive; 
 
      }
+
 
 
 
