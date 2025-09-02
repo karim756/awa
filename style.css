@@ -196,13 +196,22 @@
       /* text-shadow: 4px 4px 10px #ffffff; */
     }
 
-    @media (max-width:855px){
-    .awa {
-        display:block;
-    }
+   @media (max-width:855px){
+
+    .hero-text h1 {
+      font-size: 3rem;
+      }
     .hero img{
       display: none;
     }
+    .awa{
+        flex-direction: column;
+        align-items: center;
+    }
+    .awa img{
+      width: 350px;
+    }
+    
     .footer-li {
       flex-direction: column;
     }
@@ -213,7 +222,7 @@
     footer .copy-right{
       font-size: 13px;
     }
-     .product-2-grid{
+    .product-2-grid{
       flex-direction: column;
       align-items: center;
     }
@@ -415,6 +424,7 @@
       font-family:"Playwrite GB S", cursive; 
 
      }
+
 
 
 
