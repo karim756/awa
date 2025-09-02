@@ -292,7 +292,11 @@
       text-align: center;
       background-color: white;
       box-shadow: 4px 4px 10px var(--maincolor2,white);
+      transition-duration: 0.5s;
     }
+    .product-2:hover{
+        transform: translateY(-10px);
+     }
     .product-2 img {
       width: 100px;
       height: 100px;
@@ -424,6 +428,7 @@
       font-family:"Playwrite GB S", cursive; 
 
      }
+
 
 
 
