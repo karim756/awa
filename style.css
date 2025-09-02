@@ -187,6 +187,7 @@
      .awa p{
       padding: 40px;
       color:var(--maincolor2);
+      text-align: center;
       font-size: 1.2rem;
       font-weight: bold;
       font-family:"Playwrite GB S", cursive; 
@@ -212,7 +213,10 @@
     footer .copy-right{
       font-size: 13px;
     }
-
+     .product-2-grid{
+      flex-direction: column;
+      align-items: center;
+    }
 
    }
                                    /* link to shop */
@@ -411,6 +415,7 @@
       font-family:"Playwrite GB S", cursive; 
 
      }
+
 
 
 
