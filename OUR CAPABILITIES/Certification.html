@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css">
+  <link rel="website icon" href="../../coding/image/AWA-PNG-1-e1638974616381.png">
+                     <!-- Google foont famliy -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"rel="stylesheet">
+                     <!-- font awsome libaray -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+   integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>OUR CAPABILITIES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+      .content p{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+       .content h1{
+        padding: 0px 10px 0px 10px;
+        margin: 0;
+        text-align: center;
+        font-size: 40px;
+        font-family:"Playwrite GB S", cursive;
+        color:var(--maincolor2,red);
+      }
+      .h1 p{
+        padding:0px 10px 50px 10px ;
+        text-align: center;
+        margin: 0;
+      }
+      .content h2{
+        color: var(--maincolor2,red);
+      }
+      .h2 p{
+        padding:10px;
+        text-align: start;
+      }
+      .card{
+        display: flex;
+        padding: 150px 10px 150px 10px ;
+      }
+      .card div{
+        padding: 10px;
+        width: 25%;
+      }
+      .card div img{
+          display: block;
+          margin: auto;
+          width: 50%;
+          transition-duration:0.5s ;
+      }
+      .card div p{
+        text-align: center;
+      }
+      .card div h2{
+        color: var(--maincolor2);
+        text-align: center;
+      }
+
+      .card div img:hover{
+        filter: drop-shadow(10px 10px 1px var(--maincolor2));
+        transform :  translateY(-20px) ;
+      }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .ourrange {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+      
+        }
+        @media (max-width: 1115px){
+             .card {
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+             }
+             .card div{
+              width: 80%;
+             }
+        }
+    </style>
+
+</head>
+<header>
+    <img src="../..//coding/image/AWA-PNG-1-e1638974616381.png" alt="AWA Logo" height="40">
+    <nav>
+      <a href="../index.html"><i class="fa-solid fa-house"></i> home</i></a>
+      <!-- <a href="#" class="circle"></a> -->
+      <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+      <a href="../our prouduct/OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+      <a class="active1" href="Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+      <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
+      <a href="#"><i class="fa-solid fa-phone-volume"></i> contact</a>
+    </nav>
+ <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+       <div class="dropdown_menu ">  
+         <a href="../index.html"><i class="fa-solid fa-house"></i> home</i></a>
+         <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+         <a href="../our prouduct/OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+         <a class="active1" href="Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+         <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
+         <a href="#"><i class="fa-solid fa-phone-volume"></i> contact</a>
+       </div>
+  </header>
+   <script>
+        const togglebtn = document.querySelector(".toggle_btn")
+        const togglebtnicon = document.querySelector(".toggle_btn")
+        const dropdownmenu = document.querySelector(".dropdown_menu")
+
+        togglebtn.onclick = function () {
+            dropdownmenu.classList.toggle("open")
+            const isopen = dropdownmenu.classList.contains("open")
+
+            togglebtnicon.classList = isopen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
+<body>
+    <!-- The sidebar -->
+   <div class="sidebar">
+    <a href="Business Supports.html">BUSINESS SUPPORTS</a>
+    <a href="Facilities & Technologies.html">FACILITIES & TECHNOLOGIES</a>
+    <a href="Quality Assurance.html">QUALITY ASSURANCE</a>
+    <a class="active"href="Certification.html">CERTIFICATION</a>
+  </div>
+
+<!-- Page content -->
+<div class="content">
+
+  <div class="h1">
+      <h1>OUR CAPABILITIES</h1>
+      <P>
+        We realize that understanding and answering clients' need is the key to success within the industry. Which is why, we manage everything right from processing to product development and marketing to sales and much more at AWA.
+      </P>
+  </div>
+  <div class="h2">
+      <h2>REGULATORY COMPLIANCES</h2>
+      <p>
+       All our products comply with international regulatory standards and regulations such as Halal and Kosher. AWA Bio ingredients is also actively supporting the relevant organizations within the industry.
+      </p>
+      <div class="imge">
+        <img src="../image/Halal-e1471443917695 (1).jpg" style=" width:150px;" alt="image">
+        <img src="../image/KOsher-e1471443901479.jpg" style=" width:150px;" alt="image">
+      </div>
+  </div>
+</div>
+  <div class="card">
+    <div class="card1">
+      <img src="../image/headphones1-e1470836051100.png" alt="image">
+      <h2>Business Support</h2>
+      <p>We strive to contribute to our clients' successes.</p>
+    </div>
+    <div class="card2">
+      <img src="../image/35ac51ca3bedd987b8ba055dc790e129.png" alt="image">
+      <h2>Facilities&Technology</h2>
+      <p>We believe that technology and innovation are the keys to success.</p>
+    </div>
+    <div class="card3">
+      <img src="../image/excellent_17404488.png" alt="image">
+      <h2>Quality Assurance</h2>
+      <p>Delivering value added ingredients along with consistent quality has always been our aim.</p>
+    </div>
+    <div class="card4">
+      <img src="../image/diploma_17514218.png"  alt="image">
+      <h2>Certification</h2>
+      <p>All our products comply with international regulatory standards.</p>
+    </div>
+  </div>
+
+  
+<footer>
+    <div>
+      <h1>AWA Food Solutions</h1>
+    </div>
+    <div class="footer-li">
+       <ul>
+           <li><a href="#"> <i class="fa-brands fa-instagram fa-2xl"></i> instagram</a></li>
+           <li><a href="#"> <i class="fa-brands fa-facebook fa-2xl"></i>facebook</a></li>
+           <li><a href="#"> <i class="fa-brands fa-twitter fa-2xl"></i>twitter</a></li>
+       </ul>
+       <ul>
+           <li><i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i></i> Head Office: 243, Horreya Ave., Sporting Alexandria - Egypt</li>
+           <li><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></i> info@awa-bioingredients.com</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i></i>+203 429 2030</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i>+203 421 1200</li>
+       </ul>
+    <img src="../../coding/image/f0a7f4b9b5d8710c35fae2aa405b7472.png" alt="filter">
+    </div>
+    <div class="copy-right">&copy; 2025 AWA Food Solutions. All rights reserved.</div>
+
+  </footer>
+</body>
+</html>
