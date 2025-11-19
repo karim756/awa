@@ -15,7 +15,10 @@
       /* --maincolor1: #abc8a2;
       --maincolor2:#1a2417; */
       --maincolor1:white;
-      --maincolor2:  #1d66be;
+      --maincolor2:  #0896d8;
+    }
+    *{
+      user-select: none;
     }
     /* body {
     height: 130vh;
@@ -41,7 +44,7 @@
       align-items:center;
       padding: 2rem 4rem;
       margin-bottom: 40rem;
-      background-color: var(--maincolor2,white);
+      background: linear-gradient(135deg, #39bcf8, #0896d8,#015379);
       box-shadow: 7px 9px 19px black;
       height:4.5rem;
       width: 100%;
@@ -49,6 +52,10 @@
       position: fixed; 
       top:33px;
       z-index: 1000;  
+      outline: none;
+    }
+    header img{
+      filter: drop-shadow(3px 5px 1px black);
     }
     nav a {
       width: 100%;
@@ -56,7 +63,7 @@
       text-decoration: none;
       color:black;
       font-weight: 500;
-      padding:10px;
+      padding: 10px;
       transition-duration: 0.1s;
     }
     nav a:hover{ 
@@ -70,13 +77,13 @@
       padding: 10px ;
       border-radius: 20px;
       box-shadow: 8px 8px 10px black;
+      
     }
      .toggle_btn {
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
     display:none;
-     box-shadow: 8px 8px 10px black;
 }
 
     /* DROPDOWN MENU */
@@ -199,7 +206,7 @@
       /* text-shadow: 4px 4px 10px #ffffff; */
     }
 
-   @media (max-width:855px){
+    @media (max-width:855px){
 
     .hero-text h1 {
       font-size: 3rem;
@@ -231,8 +238,19 @@
     }
 
    }
+    @media (max-width:430px){
+
+       .hero-text button{
+        width: 280px;
+       }
+
+    }
+
+
+
+
                                    /* link to shop */
-    .categories {
+    /* .categories {
       display: flex;
       justify-content: space-around;
       padding: 9rem 0rem;
@@ -272,7 +290,10 @@
       outline: none;
       position: absolute;
       bottom:90px;
-    }
+    } */
+
+
+
                                               /* why awa ? */
     .products-2 {
       backdrop-filter: blur(20px);
@@ -297,8 +318,8 @@
       box-shadow: 4px 4px 10px var(--maincolor2,white);
       transition-duration: 0.5s;
     }
-    .product-2:hover{
-        transform: translateY(-10px);
+     .product-2:hover{
+      transform: translateY(-10px);
      }
     .product-2 img {
       width: 100px;
@@ -397,10 +418,11 @@
  
                                                   /* footer */
     footer{
-      background-color: var(--maincolor2);
+     background: linear-gradient(135deg, #53c6fc, #0896d8,#015981);
       color: var(--maincolor1);
       border-radius: 70px;
-      width: 100%;
+       box-shadow: 10px 10px 20px black;
+      margin: 10px;
     }
      footer div h1{
       padding: 20px;
@@ -415,7 +437,7 @@
      footer ul li {
       list-style: none;
       padding: 20px 110px 20px 20px;
-       font-family:"Playwrite GB S", cursive; 
+      font-family:"Playwrite GB S", cursive; 
       text-decoration: none;
       color: var(--maincolor1);
      }
@@ -431,21 +453,4 @@
       font-family:"Playwrite GB S", cursive; 
 
      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
