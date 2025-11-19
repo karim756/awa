@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css">
+  <link rel="website icon" href="../../coding/image/Screenshot 2025-09-07 141235.png">
+                     <!-- Google foont famliy -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"rel="stylesheet">
+                     <!-- font awsome libaray -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+   integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Contact Us | AWA GROUP</title>
+  <style>
+    :root {
+      --maincolor1: white;
+      --maincolor2: #0896d8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    body {
+      background: linear-gradient(135deg, #000000 40%, #031d2d 100%);
+      color: var(--maincolor1);
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 200px;
+    }
+
+    .wave {
+      position: absolute;
+      bottom:750px;
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(to top, #031d2d, transparent);
+      overflow: hidden;
+    }
+
+    .wave::before, .wave::after {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -80%;
+      left: -50%;
+      background: radial-gradient(circle at 50% 50%, rgba(8,150,216,0.6), transparent 70%);
+      opacity: 0.6;
+      animation: waveMove 10s linear infinite;
+      filter: drop-shadow(0 0 10px var(--maincolor2));
+    }
+
+    .wave::after {
+      opacity: 0.4;
+      animation-duration: 14s;
+      animation-direction: reverse;
+    }
+
+    @keyframes waveMove {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+      /* Responsive Design */
+         @media (max-width: 770px){
+
+              .wave {
+                    position: absolute;
+                    bottom:1120px;
+                    width: 100%;
+                    height: 180px;
+         }
+            @media (max-width: 430px) {
+                .wave {
+                        position: absolute;
+                        bottom:1300px;
+                        width: 100%;
+                        height: 180px;
+        }
+    }
+    }
+
+    .contact-section {
+      position: relative;
+      z-index: 2;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease;
+      user-select: none;
+      margin-top: 80px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: var(--maincolor2);
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px var(--maincolor2);
+    }
+
+    .info {
+      max-width: 600px;
+      margin-bottom: 50px;
+      line-height: 1.8;
+      color: #d4d4d4;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(8, 150, 216, 0.2);
+      padding: 30px;
+      flex: 1 1 300px;
+      min-width: 300px;
+      animation: slideUp 1.5s ease;
+      margin-bottom: 150px;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-group i {
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      color: var(--maincolor2);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: white;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--maincolor2);
+      box-shadow: 0 0 10px var(--maincolor2);
+    }
+
+    textarea { resize: none; height: 120px; }
+
+    button {
+      background: var(--maincolor2);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(8, 150, 216, 0.4);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(8, 150, 216, 0.8);
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .detail-item {
+       display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      transition: transform 0.3s;
+    }
+
+      .detail-item:hover {
+      transform: translateX(-5px);
+    }
+
+    .icon-circle {
+      background-color: rgba(8,150,216,0.2);
+      border-radius: 50%;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--maincolor2);
+      font-size: 1.2rem;
+      text-shadow: 0 0 8px var(--maincolor2);
+      flex-shrink: 0;
+      transition: all 0.3s;
+      width: 50px;
+      height: 50px;
+    }
+
+
+    .detail-item:hover .icon-circle {
+      background-color: rgba(8,150,216,0.4);
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(8, 150, 216, 0.5);
+    }
+
+    .detail-text {
+       display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .detail-title {
+      color: var(--maincolor2);
+      font-weight: bold;
+      margin-bottom: 3px;
+      font-size: 1.1rem;
+    }
+
+    .detail-data {
+      color: #ccc;
+    }
+
+    /* footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #777;
+      font-size: 0.9rem;
+      background: rgba(0,0,0,0.3);
+      box-shadow: inset 0 2px 10px rgba(8,150,216,0.2);
+    } */
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .contact-box { padding: 20px; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+     <header>
+    <img src="../../coding/image/Screenshot 2025-09-07 141235.png" alt="AWA Logo" style="height:70px; ">
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i> home</i></a>
+      <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+      <a href="our prouduct/OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+      <a href="OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+      <a href="aboutus.html"><i class="fa-solid fa-address-card"></i> About</a>
+      <a class="active1" href="contactus.html"><i class="fa-solid fa-phone-volume"></i> contact</a>
+    </nav>
+    <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+       <div class="dropdown_menu ">
+         <a  href="index.html"><i class="fa-solid fa-house"></i> home</i></a>
+         <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+         <a href="our prouduct/OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+         <a href="OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+         <a href="aboutus.html"><i class="fa-solid fa-address-card"></i> About</a>
+         <a class="active1"href="contactus.html"><i class="fa-solid fa-phone-volume"></i> contact</a>
+       </div>
+  </header>
+   <script>
+        const togglebtn = document.querySelector(".toggle_btn")
+        const togglebtnicon = document.querySelector(".toggle_btn")
+        const dropdownmenu = document.querySelector(".dropdown_menu")
+
+        togglebtn.onclick = function () {
+            dropdownmenu.classList.toggle("open")
+            const isopen = dropdownmenu.classList.contains("open")
+
+            togglebtnicon.classList = isopen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <p class="info">We’d love to hear from you! Whether you have questions, feedback, or business inquiries, feel free to reach out.</p>
+
+    <div class="contact-wrapper">
+      <!-- Contact Form Box -->
+      <div class="contact-box">
+        <form id="contact-form">
+          <div class="input-group">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Your Name" name="from_name" required>
+          </div>
+          <div class="input-group">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Your Email" name="from_email" required>
+          </div>
+          <div class="input-group">
+            <i class="fa fa-comment"></i>
+            <textarea placeholder="Your Message" name="message" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info Box with Circle Icons and Inline Titles -->
+      <div class="contact-box">
+        <div class="details">
+          <div class="detail-item">
+            <div class="icon-circle"><i class="fa fa-map-marker-alt"></i></div>
+            <div class="detail-text">
+              <span class="detail-title">Head Office:</span>
+              <span class="detail-data">243, Horreya Ave., Sporting Alexandria - Egypt</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="icon-circle"><i class="fa fa-phone"></i></div>
+            <div class="detail-text">
+              <span class="detail-title">Phone 1:</span>
+              <span class="detail-data">+203 429 2030</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="icon-circle"><i class="fa fa-phone"></i></div>
+            <div class="detail-text">
+              <span class="detail-title">Phone 2:</span>
+              <span class="detail-data">+203 421 1200</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="icon-circle"><i class="fa fa-envelope"></i></div>
+            <div class="detail-text">
+              <span class="detail-title">Email:</span>
+              <span class="detail-data">info@awa-bioingredients.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <div class="wave"></div>
+
+
+   <footer>
+
+    <div>
+      <h1 style="color: white;">AWA Food Solutions</h1>
+    </div>
+    <div class="footer-li">
+       <ul>
+           <li><a href="#"> <i class="fa-brands fa-instagram fa-2xl"></i> instagram</a></li>
+           <li><a href="https://www.facebook.com/sweetandslim1/"> <i class="fa-brands fa-facebook fa-2xl"></i>facebook</a></li>
+           <li><a href="#"> <i class="fa-brands fa-twitter fa-2xl"></i>twitter</a></li>
+       </ul>
+       <ul>
+           <li><i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i></i> Head Office: 243, Horreya Ave., Sporting Alexandria - Egypt</li>
+           <li><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></i> info@awa-bioingredients.com</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i></i>+203 429 2030</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i>+203 421 1200</li>
+       </ul>
+    <img src="../../coding/image/f0a7f4b9b5d8710c35fae2aa405b7472.png" alt="filter">
+    </div>
+    <div class="copy-right">&copy; 2025 AWA Food Solutions. All rights reserved.</div>
+
+  </footer>
+
+
+
+  <!-- EmailJS Integration -->
+  <!-- أضف هذا قبل إغلاق </body> -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // تهيئة EmailJS بالمفتاح العام
+  emailjs.init("u23DuJHWsQC6dhnlO");
+
+  // اختيار النموذج
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // منع إعادة تحميل الصفحة عند الضغط على Send
+
+    // إرسال النموذج عبر EmailJS
+    emailjs.sendForm('service_lgzgpbz', 'template_u646jon', this)
+      .then(() => {
+        alert('Message sent successfully!'); // إشعار نجاح الإرسال
+        form.reset(); // إعادة تعيين النموذج
+      }, (error) => {
+        alert('Error sending message: ' + JSON.stringify(error)); // إشعار الخطأ
+      });
+  });
+</script>
+
+</body>
+</html>

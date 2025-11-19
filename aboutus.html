@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="website icon" href="../../coding/image/Screenshot 2025-09-07 141235.png">
+                     <!-- Google foont famliy -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"rel="stylesheet">
+                     <!-- font awsome libaray -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+   integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>AWA Food Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#1d66be; /* deep night */
+      --card:#1d66be;/*  rgba(255,255,255,0.02) */
+      --accent1:#7c3aed; /* purple */
+      --accent2:#06b6d4; /* cyan */
+      --glass: rgba(255,255,255,0.06);
+      --muted: #9aa4b2;
+      --radius:16px;
+      --maxw:900px;
+    }
+
+    *{
+      box-sizing:border-box;
+       user-select: none;
+    }
+
+    html,body{
+        /* background: linear-gradient(135deg, #000000 40%, #031d2d 100%); */
+      color: var(--maincolor1);
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+     
+    }
+
+    .about{
+      display: flex;
+      padding: 6rem 1rem 0 3rem;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    
+    .about h1{
+      font-size: 5rem;
+      font-family: "Almendra", serif;
+      font-weight: 700;
+      font-style: italic;
+      user-select: none;
+      font-size: 500%;
+       animation: fadeIn 2s ease;
+      color: var(--maincolor2);
+      margin-bottom: 20px;
+      text-shadow: 5px 5px 0px #041226;
+    }
+
+      @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px
+    }
+
+     .cards-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .card{
+      /* background: rgba(255, 255, 255, 0.05); */
+      background: #041226;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #041226;
+      padding: 30px;
+      animation: slideUp 1.5s ease;
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
+     @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+     }
+
+    /* responsive */
+    @media (max-width:880px){
+      .card{grid-template-columns:1fr;}
+    }
+
+    /* Image area */
+     /* Image area */
+    .media{
+      position:relative;
+      overflow:hidden;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex: 1;
+      min-height: 350px;
+    }
+
+    .media img{
+      width: 1200%;
+      height: 100%;
+      object-fit: cover;
+      display:block;
+      transition:transform .6s cubic-bezier(.2,.9,.3,1);
+      transform-origin:center;
+    }
+
+    .media:hover img{
+      transform:scale(1.06)
+    }
+
+    .overlay{
+      position:absolute;
+      inset:12px;
+      border-radius:10px;
+      background:linear-gradient(180deg,rgba(2,6,23,0.0), rgba(2,6,23,0.48));
+      pointer-events:none;
+    }
+
+    .badge{
+      position:absolute;
+      left:12px;
+      top:12px;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(6px);
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+      color:#fff
+    }
+
+    .meta-short{
+      position:absolute;
+      left:12px;
+      bottom:12px;
+      color:#fff;
+      pointer-events:none;
+    }
+    .meta-short h3{
+      margin:0;
+      font-size:18px;
+    }
+    .meta-short p{
+      margin:4px 0 0;
+      font-size:13px;
+      color:rgba(255,255,255,0.85);}
+
+    /* right column */
+    .info{ padding: 0;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      flex: 1;}
+    .title{display:flex;align-items:center;gap:10px}
+    .title h2{margin:0;font-size:20px}
+    .subtitle{color:var(--muted);font-size:13px;margin-top:6px}
+
+    .description{margin-top:14px;color:#dbe9f7;line-height:1.5}
+
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .tag{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    .actions{display:flex;gap:10px;margin-top:18px}
+    .btn{padding:10px 14px;border-radius:12px;border:0;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#041226;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(124,58,237,0.18);}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+
+    .details{margin-top:18px;color:var(--muted);font-size:13px;display:flex;gap:12px;flex-wrap:wrap}
+
+    /* lightbox modal */
+    .lightbox{position:fixed;inset:0;background:rgba(2,6,23,0.75);display:none;align-items:center;justify-content:center;padding:32px;z-index:1200}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:95%;max-height:90%;border-radius:12px;box-shadow:0 30px 60px rgba(2,6,23,0.7)}
+
+    /* small helper */
+    .caption{margin-top:8px;color:var(--muted);font-size:13px}
+
+    /* subtle focus styles */
+    .btn:focus{outline:3px solid rgba(7,16,34,0.6)}
+
+        /* الصورة الشخصية */
+    .avatar{position:relative;overflow:hidden;border-radius:14px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.9,.3,1)}
+    .avatar:hover img{transform:scale(1.08)}
+    .overlay{position:absolute;inset:12px;border-radius:10px;background:linear-gradient(180deg,rgba(2,6,23,0.0), rgba(2,6,23,0.5))}
+    
+
+    /* النصوص */
+    .info{padding:8px 6px;display:flex;flex-direction:column;justify-content:space-between}
+    .title h2{margin:0;font-size:22px}
+    .subtitle{color:var(--muted);font-size:14px;margin-top:6px}
+    .bio{margin-top:14px;color:#dbe9f7;line-height:1.6;text-align: justify;}
+
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .tag{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    .actions{display:flex;gap:10px;margin-top:18px}
+    .btn{padding:10px 14px;border-radius:12px;border:0;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#041226;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(236,72,153,0.18)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+
+    .details{margin-top:18px;color:var(--muted);font-size:13px;display:flex;gap:12px;flex-wrap:wrap}
+
+
+
+      /* Responsive Design */
+    @media (max-width: 900px) {
+      .card {
+        flex-direction: column;
+      }
+      
+      .media, .avatar {
+        min-height: 250px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      
+      .toggle_btn {
+        display: block;
+      }
+      
+      .about h1 {
+        font-size: 3rem;
+      }
+      
+      .card {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 1rem;
+      }
+      
+      .about {
+        padding: 4rem 1rem 0 1rem;
+      }
+      
+      .about h1 {
+        font-size: 2.5rem;
+        margin-top: 60px;
+      }
+      
+      .cards-container {
+        padding: 20px 10px;
+      }
+      
+      .card {
+        padding: 15px;
+      }
+      
+      .actions {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../..//coding/image/Screenshot 2025-09-07 141235.png" alt="AWA Logo" height="70">
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i> home</i></a>
+      <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+      <a href="our prouduct/OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+      <a href="OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+      <a  class="active1" href="aboutus.html"><i class="fa-solid fa-address-card"></i> About</a>
+      <a href="contactus.html"><i class="fa-solid fa-phone-volume"></i> contact</a>
+    </nav>
+    <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+       <div class="dropdown_menu ">
+         <a  href="index.html"><i class="fa-solid fa-house"></i> home</i></a>
+         <a href="https://awafoodsolutions.com/shop/"><i class="fa-solid fa-cart-shopping"></i> shop</a>
+         <a href="our prouduct/OLEORESINS.html"><i class="fa-brands fa-product-hunt"></i>  PROUDUCT RANGE</a>
+         <a href="OUR CAPABILITIES/Business Supports.html"><i class="fa-solid fa-warehouse"></i>  OUR CAPABILITIES</a>
+         <a class="active1" href="aboutus.html"><i class="fa-solid fa-address-card"></i> About</a>
+         <a href="contactus.html"><i class="fa-solid fa-phone-volume"></i> contact</a>
+       </div>
+  </header>
+   <script>
+        const togglebtn = document.querySelector(".toggle_btn")
+        const togglebtnicon = document.querySelector(".toggle_btn")
+        const dropdownmenu = document.querySelector(".dropdown_menu")
+
+        togglebtn.onclick = function () {
+            dropdownmenu.classList.toggle("open")
+            const isopen = dropdownmenu.classList.contains("open")
+
+            togglebtnicon.classList = isopen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
+    <section>
+      <div class="about">
+           <h1>ABOUT GROUP</h1>
+      </div>
+    </section>
+  
+  <!-- تم نقل الكارد الثاني ليظهر أولاً -->
+  <div class="wrap">
+    <article class="card" aria-labelledby="person-name">
+      <figure class="avatar" role="img" aria-label="صورة شخصية">
+        <img src="../../coding/image/Image2-3.png" alt="صورة شخصية"/>
+        <div class="overlay"></div>
+      </figure>
+
+      <div class="info">
+        <div>
+          <div class="title">
+            <h2 id="person-name">Eng. Wael Ghandour </h2>
+          </div>
+          <div class="subtitle">Founder of awa Group</div>
+
+          <p class="bio">Eng. Wael Ghandour established AWA Group and as a subsidiary, formed AWA Food Additives, AWA Food Solutions and AWA Ingredients Supply and the latest addition, AWA Bio Ingredients. A chemical engineer by profession, Ghandour is a true visionary at every sense of the word and loves to explore and experiment. Always in search of new ideas and concepts, in the heart of hearts, he is an avid traveller on the lookout for 'the' cutting edge concept.</p>
+
+          <div class="tags">
+            <span class="tag">CEO AWA Group</span>
+            <!-- <span class="tag">React</span>
+            <span class="tag">UI/UX</span> -->
+          </div>
+
+          <!-- <div class="actions">
+            <button class="btn">تواصل</button>
+            <button class="btn ghost">معرض الأعمال</button>
+            <button class="btn ghost">سيرة ذاتية</button>
+          </div>
+
+          <div class="details">
+            <span>العمر: 29</span>
+            <span>الخبرة: 5 سنوات</span>
+            <span>البريد: ahmed@example.com</span>
+          </div> -->
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- تم نقل الكارد الأول ليظهر ثانياً -->
+  <div class="wrap">
+    <article class="card" aria-labelledby="card-title">
+      <figure class="media" role="group" aria-label="صورة مع وصف">
+        <!-- <span class="badge">OUR LOGO</span> -->
+        <!-- استبدل src بالمسار الخاص بك -->
+        <img style="width: 350px ; height: 240px;" id="main-image" src="../../picture/awa_group.png" alt="AWA"/>
+        <div class="overlay"></div>
+        <figcaption class="meta-short">
+          <h3 id="card-title">awa Group</h3>
+          <!-- <p>:  — </p> -->
+        </figcaption>
+      </figure>
+      <div class="info">
+        <div>
+          <div class="title">
+            <h2>AWA GROUP </h2>
+          </div>
+          <div class="subtitle">Established in 1993 </div>
+          <p class="description">AWA Group has come a long way to be a customer satisfaction based corporation backed up by its first class service and highly valued by local as well as multinational companies. Customer satisfaction is our precedence and thus, we strive to maintain and foster our professional and personal growth through several approaches. We achieve our excellence through hiring the highest caliber staff, training and developing them using the latest methods and techniques and committing to our customers as long-term business partners.</p>
+
+          <div class="tags">
+            <span class="tag">premium Quality</span>
+            <span class="tag">Organic Certified</span>
+            <span class="tag">Testimonnials</span>
+          </div>
+
+          <div class="actions">
+            <button class="btn" id="open-btn" aria-haspopup="dialog">Enlarged view</button>
+            <button class="btn ghost" id="share-btn">sharing</button>
+          </div>
+
+          <!-- <div class="details">
+            <span> </span>
+            <span></span>
+            <span></span>
+          </div>
+        </div> -->
+
+        <!-- <div>
+          <p class="caption">نصيحة: استخدم وصفاً دقيقاً و"alt" واضح للـ SEO والوصول لذوي الاحتياجات الخاصة.</p>
+        </div> -->
+      </div>
+    </article>
+  </div>
+
+  <!-- lightbox modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة مكبرة">
+    <img id="lightbox-img" src="" alt="صورة مكبرة"/>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('open-btn');
+    const lightbox = document.getElementById('lightbox');
+    const mainImage = document.getElementById('main-image');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const downloadBtn = document.getElementById('download-btn');
+    const shareBtn = document.getElementById('share-btn');
+
+    openBtn.addEventListener('click', ()=>{
+      lightboxImg.src = mainImage.src;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    lightbox.addEventListener('click', (e)=>{
+      if(e.target === lightbox || e.target === lightboxImg){
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    downloadBtn.addEventListener('click', ()=>{
+      const a = document.createElement('a');
+      a.href = mainImage.src;
+      a.download = 'image.jpg';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    });
+
+    shareBtn.addEventListener('click', async ()=>{
+      if(navigator.share){
+        try{
+          await navigator.share({title:document.title,text:'شوف الصورة دي',url:window.location.href});
+        }catch(e){console.log(e)}
+      }else{
+        alert('المتصفح لا يدعم ميزة المشاركة المباشرة — انسخ الرابط يدوياً.');
+      }
+    });
+  </script>
+
+    <footer>
+
+    <div>
+      <h1>AWA Food Solutions</h1>
+    </div>
+    <div class="footer-li">
+       <ul>
+           <li><a href="#"> <i class="fa-brands fa-instagram fa-2xl"></i> instagram</a></li>
+           <li><a href="https://www.facebook.com/sweetandslim1/"> <i class="fa-brands fa-facebook fa-2xl"></i>facebook</a></li>
+           <li><a href="#"> <i class="fa-brands fa-twitter fa-2xl"></i>twitter</a></li>
+       </ul>
+       <ul>
+           <li><i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i></i> Head Office: 243, Horreya Ave., Sporting Alexandria - Egypt</li>
+           <li><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></i> info@awa-bioingredients.com</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i></i>+203 429 2030</li>
+           <li><i class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i>+203 421 1200</li>
+       </ul>
+    <img src="../../coding/image/f0a7f4b9b5d8710c35fae2aa405b7472.png" alt="filter">
+    </div>
+    <div class="copy-right">&copy; 2025 AWA Food Solutions. All rights reserved.</div>
+
+  </footer>
+</body>
+</html>
